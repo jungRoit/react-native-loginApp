@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput } from 'react-native';
 
-export default class Home extends React.Component {
+export default class LoginBox extends React.Component {
   render() {
     return (
       <View>
