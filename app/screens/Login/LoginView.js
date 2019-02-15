@@ -1,14 +1,26 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, AsyncStorage } from 'react-native';
 
 import LoginBox from '../../components/LoginBox';
 
-export default class extends React.Component {
+import styles from './styles';
+
+export default class LoginView extends React.Component {
+  static navigationOptions = {
+    header: null
+  };
+  
   render() {
     return (
-      <View>
-        <LoginBox />
+      <View style={styles.loginWrapper}>
+        <LoginBox login={this.login} />
       </View>
     );
   }
+
+  login = async () => {
+    await AsyncStorage.setItem('token','roit');
+    this.props.navigation.navigate('SignedIn');
+    
+  };
 }

@@ -1,12 +1,20 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 export default class DashboardView extends React.Component {
-render() {
-return (
-<View>
-  <Text>Dashboard</Text>
-</View>
-);
-}
+  static navigationOptions = {
+    header: null
+  };
+  
+  render() {
+    return (
+      <View>
+        <Text>Dashboard</Text>
+        <Button title='Go to Profile' onPress={this.navigateToProfile} />
+      </View>
+    );
+  }
+  navigateToProfile = () => {
+    this.props.navigation.navigate('Profile');
+  }
 }

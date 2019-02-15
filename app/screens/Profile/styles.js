@@ -1,10 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
- loginWrapper: {
-   flex:1,
-   justifyContent: 'center',
- }
+  box: {
+    marginBottom: 10
+  }
 });
 
 export default styles;

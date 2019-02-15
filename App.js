@@ -9,6 +9,7 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+// import { createRootNavigator } from './app/Navigation/StackNavigator';
 
 import AppNavigator from './app/Navigation';
 
@@ -21,7 +22,9 @@ const instructions = Platform.select({
 
 export default class App extends Component {
   render() {
-    return <AppNavigator />
+    // const Navigator = createRootNavigator();
+    // return <Navigator />
+    return <AppNavigator />;
   }
 }
 
